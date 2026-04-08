@@ -7,7 +7,7 @@ const teas = [
     name: "Purple Tea",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: "12.99",
-    image: "PurpleAuNaturale.png",
+    image: "PurpleAuNaturale.webp",
     bgColor: "bg-purple-900",
   },
   {
@@ -15,7 +15,7 @@ const teas = [
     name: "Black Tea",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: "10.99",
-    image: "AberdaresGold.png",
+    image: "AberdaresGold.webp",
     bgColor: "bg-gray-900",
   },
   {
@@ -23,7 +23,7 @@ const teas = [
     name: "Yellow Tea",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     price: "14.99",
-    image: "GoldenYellow.png",
+    image: "GoldenYellow.webp",
     bgColor: "bg-yellow-600",
   },
 ];
