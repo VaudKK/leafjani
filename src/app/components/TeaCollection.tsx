@@ -42,7 +42,7 @@ export function TeaCollection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {teas.map((tea) => (
             <Card key={tea.id} className="overflow-hidden border-none shadow-lg">
-              <div className={`${tea.bgColor} h-48 flex items-center justify-center`}>
+              <div className={`${tea.bgColor} h-96 flex items-center justify-center`}>
                 <img 
                   src={tea.image} 
                   alt={tea.name}
@@ -51,9 +51,6 @@ export function TeaCollection() {
               </div>
               <div className="p-6 bg-white">
                 <h3 className="text-xl font-semibold mb-2">{tea.name}</h3>
-                <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                  {tea.description}
-                </p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold">${tea.price}</span>
                   <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-6">
