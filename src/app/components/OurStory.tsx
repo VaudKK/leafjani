@@ -1,11 +1,11 @@
 export function OurStory() {
   return (
-    <section id="about" className="bg-white px-6 py-16 scroll-mt-24">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="scroll-mt-24 bg-white px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-12">
           <div>
-            <h2 className="text-4xl font-semibold mb-6">Our Story</h2>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <h2 className="mb-5 text-3xl font-semibold sm:mb-6 sm:text-4xl">Our Story</h2>
+            <div className="space-y-4 text-sm leading-7 text-gray-700 sm:text-base sm:leading-relaxed">
               <p>
                 Welcome to LeafJani, where tradition meets innovation in every cup. Our journey began 
                 with a simple passion - to bring the world's finest teas to your table. Founded by tea 
@@ -36,7 +36,7 @@ export function OurStory() {
             <img 
               src="Yvonne.webp"
               alt="Our Story"
-              className="w-full h-auto rounded-lg shadow-xl"
+              className="h-auto w-full rounded-lg shadow-xl"
             />
           </div>
         </div>

@@ -29,15 +29,15 @@ const features = [
 
 export function Features() {
   return (
-    <section className="py-16 px-6 bg-purple-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <section className="bg-purple-50 px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
           {features.map((feature) => (
-            <div key={feature.id} className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center mb-4">
+            <div key={feature.id} className="flex flex-col items-center rounded-3xl bg-white/70 px-5 py-6 text-center shadow-sm">
+              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-purple-600 sm:h-16 sm:w-16">
                 <feature.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <h3 className="mb-2 text-base font-semibold sm:text-lg">{feature.title}</h3>
               <p className="text-sm text-gray-600">{feature.description}</p>
             </div>
           ))}

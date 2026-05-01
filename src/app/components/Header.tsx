@@ -14,14 +14,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="relative mx-auto flex max-w-7xl items-center px-4 py-4 sm:px-6">
+      <div className="relative mx-auto flex max-w-7xl items-center px-4 py-3 sm:px-6 sm:py-4">
         <a
           href="#home"
-          className="flex items-center gap-3 text-xl font-bold tracking-wider"
+          className="flex items-center gap-2 text-lg font-bold tracking-wider sm:gap-3 sm:text-xl"
           style={{ color: "#59168B" }}
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <img src="logo.png" alt="LeafJani logo" className="h-20 w-20 object-contain" />
+          <img src="logo.png" alt="LeafJani logo" className="h-14 w-14 object-contain sm:h-20 sm:w-20" />
         </a>
 
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
@@ -38,7 +38,7 @@ export function Header() {
 
         <button
           type="button"
-          className="ml-auto inline-flex items-center justify-center rounded-full border border-gray-200 p-3 text-gray-700 transition-colors hover:bg-gray-100 md:hidden"
+          className="ml-auto inline-flex items-center justify-center rounded-full border border-gray-200 p-2.5 text-gray-700 transition-colors hover:bg-gray-100 md:hidden"
           aria-expanded={isMobileMenuOpen}
           aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           onClick={() => setIsMobileMenuOpen((open) => !open)}
