@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export function Hero() {
   return (
-    <section className="relative w-full h-[500px] flex items-center justify-center">
+    <section id="home" className="relative flex h-[500px] w-full scroll-mt-24 items-center justify-center">
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -18,8 +18,10 @@ export function Hero() {
         <p className="text-lg mb-8 opacity-90">
           Indulge in our premium selection of handpicked teas from around the world
         </p>
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-base">
-          Explore Now
+        <Button asChild className="bg-purple-600 hover:bg-purple-700 text-white rounded-full px-8 py-6 text-base">
+          <a href="#teas">
+            Explore Now
+          </a>
         </Button>
       </div>
       
