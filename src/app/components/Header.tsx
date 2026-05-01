@@ -1,21 +1,64 @@
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
+const navLinks = [
+  { href: "#home", label: "Home" },
+  { href: "#teas", label: "Teas" },
+  { href: "#reviews", label: "Reviews" },
+  { href: "#about", label: "About" },
+  { href: "#contact", label: "Contact" },
+];
+
 export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80">
-      <div className="relative max-w-7xl mx-auto px-6 py-4 flex items-center">
+      <div className="relative mx-auto flex max-w-7xl items-center px-4 py-4 sm:px-6">
         <a
           href="#home"
           className="flex items-center gap-3 text-xl font-bold tracking-wider"
           style={{ color: "#59168B" }}
+          onClick={() => setIsMobileMenuOpen(false)}
         >
           <img src="logo.png" alt="LeafJani logo" className="h-20 w-20 object-contain" />
         </a>
-        
-        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-          <a href="#home" className="text-sm hover:text-purple-600 transition-colors">Home</a>
-          <a href="#teas" className="text-sm hover:text-purple-600 transition-colors">Teas</a>
-          <a href="#reviews" className="text-sm hover:text-purple-600 transition-colors">Reviews</a>
-          <a href="#about" className="text-sm hover:text-purple-600 transition-colors">About</a>
-          <a href="#contact" className="text-sm hover:text-purple-600 transition-colors">Contact</a>
+
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 md:flex">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm transition-colors hover:text-purple-600"
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <button
+          type="button"
+          className="ml-auto inline-flex items-center justify-center rounded-full border border-gray-200 p-3 text-gray-700 transition-colors hover:bg-gray-100 md:hidden"
+          aria-expanded={isMobileMenuOpen}
+          aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => setIsMobileMenuOpen((open) => !open)}
+        >
+          {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+        </button>
+      </div>
+
+      <div className={`${isMobileMenuOpen ? "block" : "hidden"} border-t border-gray-200 bg-white md:hidden`}>
+        <nav className="mx-auto flex max-w-7xl flex-col px-4 py-4 sm:px-6">
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-lg px-3 py-3 text-sm text-gray-700 transition-colors hover:bg-gray-50 hover:text-purple-600"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
